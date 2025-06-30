@@ -1,35 +1,37 @@
 channels:
   - conda-forge
 dependencies:
+  - astropy=7.1.0
+  - astroquery=0.4.10
+  - colour-science=0.4.6
+  - geopy=2.4.1
+  - ipykernel=6.29.5
+  - ipywidgets=7.7.1
+  - jupyter-contrib-nbextensions=0.7.0
+  - jupyter-server=2.16.0
+  - jupyterlab-widgets=3.0.15
+  - markdown-it-py=3.0.0
+  - matplotlib=3.10.3
+  - mdit-py-plugins=0.4.2
+  - mystmd=1.5.0
+  - numpy=2.3.1
+  - osmnx=2.0.4
+  - pandas=2.3.0
+  - pip=25.1.1
+  - pydata-sphinx-theme=0.16.1
   - python=3.12
-  - mystmd
-  - jupyter-server
-  - markdown-it-py
-  - mdit-py-plugins
-  - pydata-sphinx-theme
-  - sphinx-design
-  - sphinx-copybutton
+  - pyvista=0.45.2
+  - rich=14.0.0
+  - scipy=1.16.0
+  - skyfield=1.53
   - sphinx-autodoc2
+  - sphinx-copybutton
+  - sphinx-design
   - sphinx-togglebutton
   - sphinxcontrib-mermaid
-  - astropy
-  - astroquery
-  - numpy
-  - matplotlib
-  - scipy
-  - pandas
-  - geopy
-  - skyfield
-  - osmnx
-  - ipykernel
-  - trame-jupyter-extension
-  - jupyterlab-widgets
-  - jupyter-contrib-nbextensions
-  - colour-science
-  - rich
-  - pyvista
-  - trame
-  - trame-vuetify 
-  - trame-vtk 
-  - ipywidgets
-  - pip
+  - trame=3.10.2
+  - trame-jupyter-extension=2.1.4
+  - trame-vtk=2.9.0
+  - trame-vuetify =3.0.1
+  - pip:
+      - poetry=2.1.3

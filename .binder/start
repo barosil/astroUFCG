@@ -1,4 +1,5 @@
 #!/bin/bash
 export PYTHONPATH="./src/astroufcg"
 export PATH="./src/astroufcg:$PATH"
+poetry install
 exec "$@"
