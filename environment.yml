@@ -1,6 +1,7 @@
 channels:
   - conda-forge
 dependencies:
+  - python=3.12
   - astropy=7.1.0
   - astroquery=0.4.10
   - colour-science=0.4.6
@@ -19,7 +20,6 @@ dependencies:
   - pandas=2.3.0
   - pip=25.1.1
   - pydata-sphinx-theme=0.16.1
-  - python=3.12
   - pyvista=0.45.2
   - rich=14.0.0
   - scipy=1.16.0
