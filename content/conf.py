@@ -18,7 +18,8 @@ project = "astroUFCG"
 
 add_module_names = False
 
-exclude_patterns = ["includes/*", "releases/*","images/*", "structure/*"]
+exclude_patterns = ["includes/*", "releases/*","images/*", "structure/*",
+                    "content/images/*", ".*", "info", "notebooks", "src"]
 
 extensions = [
     "sphinx_copybutton",
@@ -97,10 +98,10 @@ html_theme_options = {
     "secondary_sidebar_items": ["page-toc", "edit-this-page"],
     "show_nav_level": 2,
     "show_toc_level": 1,
-    "switcher": {
-        "json_url": json_url,
-        "version_match": version_match,
-    },
+    # "switcher": {
+    #     "json_url": json_url,
+    #     "version_match": version_match,
+    # },
     "use_edit_page_button": False,
     "show_version_warning_banner": True,
     "header_links_before_dropdown": 8,

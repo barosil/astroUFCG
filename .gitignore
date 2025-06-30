@@ -205,3 +205,5 @@ __marimo__/
 info/
 .venv/
 poetry.lock
+# MyST build outputs
+_build

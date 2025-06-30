@@ -1,6 +1,4 @@
 # Standard library imports
-import os
-import re
 from datetime import date
 
 from sphinx.util import logging
@@ -20,7 +18,7 @@ project = "astroUFCG"
 
 add_module_names = False
 
-exclude_patterns = ["docs/includes/*", "docs/releases/*"]
+exclude_patterns = ["includes/*", "releases/*", "images/*", "structure/*", "data/", "info/", "notebooks/*", "src/*"]
 
 extensions = [
     "sphinx_copybutton",
@@ -40,6 +38,7 @@ extensions = [
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
     "sphinxext.opengraph",
+    "myst_parser",
 ]
 
 #needs_sphinx = "4.3.2"
@@ -78,12 +77,13 @@ html_context = {
     # "SITEMAP_BASE_URL": "https://docs.bokeh.org/en/", # Trailing slash is needed
     # "VERSION": version,
 }
+html_theme = "pydata_sphinx_theme"
 
-# html_css_files = ["custom.css"]
+html_static_path = ["_static"]
 
-# html_static_path = ["_static"]
-
-html_theme ="pydata_sphinx_theme"
+html_css_files = [
+    "css/custom.css"  # sem _static/ aqui
+]
 
 html_theme_options = {
     "external_links": [
@@ -97,10 +97,10 @@ html_theme_options = {
     "secondary_sidebar_items": ["page-toc", "edit-this-page"],
     "show_nav_level": 2,
     "show_toc_level": 1,
-    "switcher": {
-        "json_url": json_url,
-        "version_match": version_match,
-    },
+    # "switcher": {
+    #     "json_url": json_url,
+    #     "version_match": version_match,
+    # },
     "use_edit_page_button": False,
     "show_version_warning_banner": True,
     "header_links_before_dropdown": 8,

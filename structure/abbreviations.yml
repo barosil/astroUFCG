@@ -1,0 +1,12 @@
+version: 1
+project:
+  abbreviations:
+    - id: ccd
+      name: Câmera de Carga Acoplada
+      description: Dispositivo utilizado para capturar imagens de objetos astronômicos, convertendo luz em sinais elétricos.
+    - id: ccds
+      name: Câmeras de Carga Acoplada
+      description: Plural de CCD, referindo-se a múltiplos dispositivos utilizados em astrofotografia.
+    - id: ufcg
+      name: Universidade Federal de Campina Grande
+      description: Instituição de ensino superior localizada em Campina Grande, Paraíba, Brasil.

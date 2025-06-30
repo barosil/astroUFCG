@@ -1,0 +1,7 @@
+version: 1
+project:
+  math:
+  # Note the 'single quotes'
+  '\dobs': '\mathbf{d}_\text{obs}'
+  '\dpred': '\mathbf{d}_\text{pred}\left( #1 \right)'
+  '\mref': '\mathbf{m}_\text{ref}'
