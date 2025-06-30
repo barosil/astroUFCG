@@ -1,1 +1,4 @@
-poetry install
+#!/bin/bash
+export PYTHONPATH="./src/astroufcg"
+export PATH="./src/astroufcg:$PATH"
+exec "$@"

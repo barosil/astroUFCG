@@ -1,0 +1,31 @@
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - mystmd
+  - jupyter-server
+  - markdown-it-py
+  - mdit-py-plugins
+  - pydata-sphinx-theme
+  - sphinx-design
+  - sphinx-copybutton
+  - sphinx-autodoc2
+  - sphinx-togglebutton
+  - sphinxcontrib-mermaid
+  - astropy
+  - astroquery
+  - numpy
+  - matplotlib
+  - scipy
+  - pandas
+  - geopy
+  - pyvista[jupyter]
+  - skyfield
+  - osmnx
+  - ipykernel
+  - trame-jupyter-extension
+  - jupyterlab-widgets
+  - jupyter-contrib-nbextensions
+  - colour-science
+  - rich
+  - pip
