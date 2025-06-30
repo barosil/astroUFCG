@@ -69,6 +69,8 @@ extends:
 # To autogenerate a Table of Contents, run "myst init --write-toc"
 site:
   template: book-theme
+  domains:
+    - lbarosi.curve.space
   options:
     folders: true
     style: _static/css/custom.css
