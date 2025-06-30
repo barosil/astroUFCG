@@ -19,7 +19,6 @@ dependencies:
   - scipy
   - pandas
   - geopy
-  - pyvista[jupyter]
   - skyfield
   - osmnx
   - ipykernel
