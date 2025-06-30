@@ -22,7 +22,7 @@ project:
   exports:
     - format: pdf
     #- template: book-theme
-    - output: exports/astroUFCG.pdf
+    #- output: exports/astroUFCG.pdf
   #thumbnail: thumbnails/astroUFCG.png
 
   #binder:
