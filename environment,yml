@@ -28,4 +28,9 @@ dependencies:
   - jupyter-contrib-nbextensions
   - colour-science
   - rich
+  - pyvista
+  - trame
+  - trame-vuetify 
+  - trame-vtk 
+  - ipywidgets
   - pip
