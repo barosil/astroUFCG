@@ -9,8 +9,6 @@ dependencies:
   - geopy=2.4.1
   - ipykernel=6.29.5
   - ipywidgets=8.1.7
-  - jupyter_contrib_nbextensions=0.7.0
-  - jupyter_server=2.16.0
   - jupyterlab_widgets=3.0.15
   - markdown-it-py=3.0.0
   - matplotlib=3.10.3
@@ -30,11 +28,6 @@ dependencies:
   - sphinx-design
   - sphinx-togglebutton
   - sphinxcontrib-mermaid
-  - trame=3.10.2
-  - trame-jupyter-extension
-  - trame-vtk
-  - trame-vuetify
   - pip:
-      - poetry==2.1.3
-      - poetry-plugin-shell==1.0.1
-      - poetry-dynamic-versioning==1.8.2
+      - trame-jupyter-extension
+      - vtk-osmesa

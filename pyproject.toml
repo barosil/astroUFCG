@@ -62,7 +62,7 @@ Dynamic_Content = "https://lbarosi.curve.space/"
 [tool.poetry]
 
 packages = [
-    { include = "src/astroufcg" }
+    { include = "src/" }
 ]
 
 

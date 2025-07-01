@@ -1,5 +1,1 @@
-export PYTHONPATH="./src/astroufcg"
-export PATH="./src/astroufcg:$PATH"
-poetry config virtualenvs.path $CONDA_PREFIX
-poetry config virtualenvs.create false
-pip install .
+
