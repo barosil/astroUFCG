@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#export PYVISTA_TRAME_SERVER_PROXY_PREFIX="$JUPYTERHUB_SERVICE_PREFIX/proxy/"
+export PYTHONPATH="./src/astroufcg:$PATH"
+export PATH="./src/astroufcg:$PATH"
+pip install --no-deps -e .
+exec "$@"
+

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+pip uninstall vtk -y
+pip install --no-cache-dir --extra-index-url https://wheels.vtk.org vtk-osmesa
+export JUPYTER_ENABLE_LAB=yes
+export PYVISTA_TRAME_SERVER_PROXY_PREFIX='/proxy/'
+conda run -n notebook jupyter lab workspaces import --name default binder/workspace.jupyterlab-workspace
+exec "$@"
