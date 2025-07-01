@@ -1,19 +1,6 @@
 export PYTHONPATH="./src/astroufcg"
 export PATH="./src/astroufcg:$PATH"
-
-#jupyter contrib nbextension install --user
-#jupyter nbextension enable --py widgetsnbextension
-jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.38 --minimize=False
-
-# enable jupyter_server_proxy
-jupyter serverextension enable --sys-prefix jupyter_server_proxy
-
-# # install the bokeh server extension so that
-# # bokeh launches at startup
-# mv bokehserverextension.py ${NB_PYTHON_PREFIX}/lib/python*/site-packages/
-# # enable bokeh extension
-# jupyter serverextension enable --sys-prefix bokehserverextension
-
+poetry install
 # Setup a workspace
 # - activate the environment otherwise the workspace is imported
 #   in the user home folder rather than in the prefix path (new default)
