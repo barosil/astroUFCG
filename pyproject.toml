@@ -1,5 +1,5 @@
 [project]
-name = "astroUFCG"
+name = "astroufcg"
 version = "0.1.0"
 description = "Custo de Introdução à Astronomia e Astrofísica para o curso de Física da UFCG"
 authors = [
