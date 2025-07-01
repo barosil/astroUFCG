@@ -1,5 +1,5 @@
 export PYTHONPATH="./src/astroufcg"
 export PATH="./src/astroufcg:$PATH"
-#poetry env use 3.12
-#poetry shell
-poetry install
+poetry config virtualenvs.path $CONDA_PREFIX
+poetry config virtualenvs.create false
+pip install .
