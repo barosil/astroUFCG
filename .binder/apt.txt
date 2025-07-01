@@ -1,2 +1,4 @@
 nano
 wget
+libgl1-mesa-dev
+xvfb
