@@ -18,6 +18,8 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Astronomy",
 ]
 
+requires-python = ">=3.12, <3.14"
+
 dependencies = [
     "astropy (>=7.1.0,<8.0.0)",
     "astroquery (>=0.4.10,<0.5.0)",
@@ -58,7 +60,6 @@ Dynamic_Content = "https://lbarosi.curve.space/"
 
 
 [tool.poetry]
-requires-python = ">=3.12, <3.14"
 
 packages = [
     { include = "src/astroufcg" }
