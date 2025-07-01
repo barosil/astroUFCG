@@ -1,7 +1,7 @@
 export PYTHONPATH="./src/astroufcg"
 export PATH="./src/astroufcg:$PATH"
+poetry env use 3.12
+po
 poetry install
-# Setup a workspace
-# - activate the environment otherwise the workspace is imported
-#   in the user home folder rather than in the prefix path (new default)
-conda run -n notebook jupyter lab workspaces import .binder/workspace.json
+poetry shell
+poetry install
