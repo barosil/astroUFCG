@@ -33,7 +33,7 @@ Se sua ambição parecia desmedida, para um ambiente de tão pequenina ilha, lem
 Num momento em que se conheciam propriedades trigonométricas e alguns importantes conceitos de geometria plana, mas não existiam os conceitos de funções trigonométricas, e mesmo o número zero era usado com certa recalcitrância na comunidade grega, Aristarco coloca seu intelecto em uma tarefa brilhante, mas impossível.
 
 ```{margin}
-:::{figure} ../../00_images/people/aristarco.png
+:::{figure} ../../00_images/processed/0002_quadrado_thumbnail.png
 :width: 50px
 :align: left
 :::

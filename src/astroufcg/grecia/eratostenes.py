@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 
 from astroufcg.astronomy import get_noon_times, obseve_shadow, setup
 
-path = "../../astroUFCG"
+path = "../../../"
 setup(path)
 
 

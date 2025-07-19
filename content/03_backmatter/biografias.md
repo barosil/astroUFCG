@@ -2,11 +2,11 @@
 
 ```{admonition} Aristarco de Samos
 :class: bio
-
+:name: bio_aristarco
 <table>
   <tr>
     <td style="width: 160px;">
-      <img src="../00_images/people/Aristarchus.jpg" width="150">
+      <img src="../00_images/processed/0002_quadrado_thumbnail.png" width="150">
     </td>
     <td>
       <strong>Aristarco de Samos</strong><br>
@@ -32,17 +32,7 @@
   </tr>
 </table>
 
-<table>
-  <tr>
-    <td style="width: 160px;">
-      <img src="../00_images/people/Aristarchus.jpg" width="150">
-    </td>
-    <td>
-      <strong>Aristarco de Samos</strong><br>
-      Aristarco foi um astrônomo e matemático grego que propôs, séculos antes de Copérnico, um modelo heliocêntrico do universo, com o Sol no centro e os planetas girando ao seu redor. Ele também tentou estimar o tamanho e a distância da Lua e do Sol em relação à Terra, usando métodos geométricos baseados em observações de eclipses e ângulos aparentes — sendo pioneiro em aplicar trigonometria à astronomia.
-    </td>
-  </tr>
-</table>
+
 
 ```
 
