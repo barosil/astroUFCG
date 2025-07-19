@@ -12,13 +12,26 @@ copyright = f"©{year} {author}."
 
 project = "astroUFCG"
 
-#release = version = settings.docs_version() or __version__
+# release = version = settings.docs_version() or __version__
 
 # -- Sphinx configuration -----------------------------------------------------
 
 add_module_names = False
 
-exclude_patterns = ["includes/*", "releases/*", "images/*", "structure/*", "data/", "info/", "notebooks/*", "src/*"]
+exclude_patterns = [
+    "content/00_images/*",
+    "macros/*",
+    "data/",
+    "info/",
+    "notebooks/*",
+    "src/*",
+    "info/*",
+    "_build/*",
+    "_static/*",
+    ".vscode/*",
+    "README.md",
+    ".binder/*",
+]
 
 extensions = [
     "sphinx_copybutton",
@@ -30,7 +43,7 @@ extensions = [
     "sphinx_prolog.solex",
     "sphinx_prolog.swish",
     "sphinx_proof",
-    "sphinx.ext.autodoc",
+    "sphinx-autodoc2",
     "sphinx.ext.autosummary",
     "sphinx.ext.ifconfig",
     "sphinx.ext.imgconverter",
@@ -41,7 +54,7 @@ extensions = [
     "myst_parser",
 ]
 
-#needs_sphinx = "4.3.2"
+# needs_sphinx = "4.3.2"
 
 # -- Extensions configuration --------------------------------------------------
 
@@ -54,10 +67,10 @@ autodoc_type_aliases = {
 copybutton_prompt_text = ">>> "
 
 intersphinx_mapping = {
-    "numpy"       : ("https://numpy.org/doc/stable/", None),
-    "pandas"      : ("https://pandas.pydata.org/pandas-docs/stable/", None),
-    "python"      : ("https://docs.python.org/3/", None),
-    "sphinx"      : ("https://www.sphinx-doc.org/en/master/", None),
+    "numpy": ("https://numpy.org/doc/stable/", None),
+    "pandas": ("https://pandas.pydata.org/pandas-docs/stable/", None),
+    "python": ("https://docs.python.org/3/", None),
+    "sphinx": ("https://www.sphinx-doc.org/en/master/", None),
 }
 
 napoleon_include_init_with_doc = True
@@ -66,57 +79,38 @@ napoleon_include_init_with_doc = True
 pygments_style = "sphinx"
 
 # suppress some useless and annoying messages from sphinx.ext.viewcode
-logging.getLogger("sphinx.ext.viewcode").logger.addFilter(lambda rec: not rec.msg.startswith("Didn't find"))
+logging.getLogger("sphinx.ext.viewcode").logger.addFilter(
+    lambda rec: not rec.msg.startswith("Didn't find")
+)
 
 # -- Options for HTML output ---------------------------------------------------
 
-html_context = {
-    "default_mode": "light",
-    # "AUTHOR": author,
-    # "DESCRIPTION": "Bokeh visualization library, documentation site.",
-    # "SITEMAP_BASE_URL": "https://docs.bokeh.org/en/", # Trailing slash is needed
-    # "VERSION": version,
-}
-html_theme = "pydata_sphinx_theme"
 
+# html_theme = "pydata_sphinx_theme"
+html_theme = "sphinx_book_theme"
+templates_path = ["_static/templates"]
 html_static_path = ["_static"]
 
 html_css_files = [
     "css/custom.css"  # sem _static/ aqui
 ]
 
-html_theme_options = {
-    "external_links": [
-        {"name": "UAF",  "url": "https://uaf.ufcg.edu.br"},
-    ],
-    "github_url": "https://github.com/barosil/astroUFCG",
-    "navbar_align": "left",
-    "navbar_end": ["navbar-icon-links"],
-    "navbar_start": ["navbar-logo", "version-switcher"],
-    "pygment_light_style": "xcode",
-    "secondary_sidebar_items": ["page-toc", "edit-this-page"],
-    "show_nav_level": 2,
-    "show_toc_level": 1,
-    # "switcher": {
-    #     "json_url": json_url,
-    #     "version_match": version_match,
-    # },
-    "use_edit_page_button": False,
-    "show_version_warning_banner": True,
-    "header_links_before_dropdown": 8,
+html_context = {
+    "default_mode": "dark",
+    # "AUTHOR": author,
+    # "DESCRIPTION": "Bokeh visualization library, documentation site.",
+    # "SITEMAP_BASE_URL": "https://docs.bokeh.org/en/", # Trailing slash is needed
+    # "VERSION": version,
 }
 
-# html_sidebars = {
-#     "docs/examples/**": [],
-#     "docs/gallery": [],
-#     "index": [],
-#     "*.rst": ["search-field.html", "sidebar-nav-bs.html"],
-#     "dev_guide/**": ["search-field.html", "sidebar-nav-bs.html"],
-#     "first_steps/**": ["search-field.html", "sidebar-nav-bs.html"],
-#     "reference/**": ["search-field.html", "sidebar-nav-bs.html"],
-#     "releases/**": ["search-field.html", "sidebar-nav-bs.html"],
-#     "user_guide/**": ["search-field.html", "sidebar-nav-bs.html"],
-# }
+
+html_theme_options = {
+    "announcement": "<p class='anuncio'>Verifique o cronograma das aulas!</p>",
+    "use_sidenotes": True,
+}
+
+
+html_theme_options = {"footer_start": ["test.html"], "footer_end": ["test.html"]}
 
 favicons = [
     {
@@ -126,7 +120,6 @@ favicons = [
     },
 ]
 
-templates_path = ["_templates"]
 
 # --- MYST configuration --------------------------------------------------
 myst_enable_extensions = [
@@ -145,3 +138,8 @@ myst_enable_extensions = [
     "substitution",
     "tasklist",
 ]
+
+# Myst options
+# myst_links_externa_newtab = True
+myst_number_code_blocks = True
+myst_enable_checkboxes = True
