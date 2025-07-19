@@ -68,7 +68,7 @@ def build_timeline(
     image_pad = pad
     scale_y = height / (v_offset + 2 * pad + max_rows * (entry_height + pad))
     span_y = height / scale_y
-    image_y_scale = image_size / scale_y
+    image_y_scale = image_size  # / scale_y
 
     # -------------------------------
 
@@ -442,4 +442,5 @@ def build_timeline(
         bgcolor=bgcolor,
     )
 
-    return pn.Column(pn.pane.HoloViews(plot))
+    # return pn.Column(pn.pane.HoloViews(plot))
+    return plot

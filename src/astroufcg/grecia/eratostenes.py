@@ -201,3 +201,66 @@ def view_shadow_3D(site, df, prefix="01", year=-200, object_height=10, p=None):
     )
     p.enable_shadows()
     return p
+
+
+def animate_shadow_3D(
+    site,
+    df,
+    prefix="01",
+    year=-200,
+    object_height=10,
+    filename="../../../content/00_images/cap_01/shadow.gif",
+):
+    sun_color = "lightyellow"
+    alt = df[f"alt_{prefix}"].values
+    az = df[f"az_{prefix}"].values
+    _times = df[f"time_{prefix}"].dt.strftime("%H:%M")
+
+    center = [0, 0, 0]
+    radius = 1
+    radius_floor = 5
+    height = object_height
+    direction = [0, 0, 1]
+    direction_floor = [0, 0, -1]
+
+    object = pv.Polygon(
+        center=center, radius=radius, normal=direction, n_sides=6
+    ).extrude((0, 0, height), capping=True)
+    floor = pv.Cylinder(
+        center=center,
+        direction=direction_floor,
+        radius=radius_floor,
+        height=height / 10,
+        resolution=100,
+    )
+    actors = {"object": object, "floor": floor}
+
+    pv.global_theme.anti_aliasing = "ssaa"
+    pv.global_theme.multi_samples = 16
+    pv.global_theme.smooth_shading = True
+
+    plotter = pv.Plotter(off_screen=True, lighting=None, window_size=(1280, 720))
+    plotter.renderer.shadow_map_resolution = 2048
+    plotter.renderer.use_shadows = True
+    plotter.renderer.use_ssao = True
+    plotter.renderer.ssao_radius = 0.5
+    plotter.renderer.ssao_bias = 0.01
+    plotter.set_background("sienna", top="skyblue")
+
+    camera = pv.Camera()
+    plotter.camera = camera
+    plotter.camera_position = "xz"
+    plotter.camera.elevation = 30
+    plotter.camera.azimuth = 90
+
+    _make_scene(plotter, actors, site, alt[0], az[0], "lower_left")
+
+    plotter.open_movie(filename, framerate=10)
+
+    for i in range(len(_times)):
+        _make_scene(plotter, actors, site, alt[i], az[i], "lower_left")
+        plotter.write_frame()
+
+    plotter.close()
+
+    print(f"Animação salva em: {filename}")
