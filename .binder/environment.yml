@@ -44,7 +44,7 @@ dependencies:
   - pyvista=0.45.2
   - pyviz_comms=3.0.6
   - pyvo=1.7
-  - rapidfuzz=2.0.0
+  - rapidfuzz=3.13.0
   - reproject=0.14.1
   - rich=14.0.0
   - ruff=0.12.2
