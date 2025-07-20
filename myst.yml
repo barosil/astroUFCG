@@ -125,7 +125,7 @@ site:
     footer: content/01_frontmatter/footer.md
   nav:
     - title: Principal
-      url: /content/main/index
+      url: /content/frontmatter/cover
     - title: Links Uteis
       url: /content/frontmatter/links
     - title: Sobre este Livro

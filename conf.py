@@ -52,6 +52,7 @@ extensions = [
     "sphinx.ext.viewcode",
     "sphinxext.opengraph",
     "myst_parser",
+    "sphinx_exercise",
 ]
 
 # needs_sphinx = "4.3.2"
