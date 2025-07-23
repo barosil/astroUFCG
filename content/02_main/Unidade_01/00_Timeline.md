@@ -1,9 +1,13 @@
 # Astronomia na Antiquidade
 
-```{figure} ../../00_images/cap_01/timeline.png
-:width: 1500px
+::::{admonition} Timeline
+:class: full-width-right
+:name: timeline-antiguidade
 
-```
+:::{figure} ../../00_images/cap_01/timeline.png
+:width: 1500px
+:::
+::::
 
 ```{admonition} Questões
 :class: info
