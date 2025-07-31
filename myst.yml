@@ -91,6 +91,9 @@ project:
             - title: "Unidade 01"
               children:
                 - pattern: "content/02_main/Unidade_01/*.*"
+            - title: "Unidade 02"
+              children:
+                - pattern: "content/02_main/Unidade_02/*.*"
         - title: Backmatter
           children:
             - pattern: "content/03_backmatter/*.*"
